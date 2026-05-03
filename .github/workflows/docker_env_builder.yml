@@ -32,7 +32,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ghcr.io/drieslab/ci-giottosuite/ci-env
+          images: ghcr.io/giotto-suite/ci-giottosuite/ci-env
           tags: |
             type=schedule,pattern={{date 'YYYYMMDD'}}
             type=raw,value=latest
@@ -45,5 +45,5 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          cache-from: type=registry,ref=ghcr.io/drieslab/ci-giottosuite/ci-env:latest
+          cache-from: type=registry,ref=ghcr.io/giotto-suite/ci-giottosuite/ci-env:latest
           cache-to: type=inline
