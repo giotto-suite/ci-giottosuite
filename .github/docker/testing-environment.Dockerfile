@@ -63,7 +63,6 @@ RUN R -e "install.packages('pak', repos = 'https://r-lib.github.io/p/pak/stable/
     'png', \
     'progressr', \
     'qpdf', \
-    'qs', \
     'R.utils', \
     'R6', \
     'raster', \
